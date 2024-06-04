@@ -1,0 +1,378 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c3e50;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.nav ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    border-radius: 100px;
+    background-position: center center;
+    background-image: radial-gradient(ellipse 150px 100px at calc(var(--after-radial-bg-position)*1px)bottom, white 0%, rgba(255, 255, 255, 0,2)100%);
+}
+.nav ul:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: var(--body-bg-color);
+    top: 1px;
+    left: 1px;
+    border-radius: 100px;
+}
+.nav ul li a {
+    display: block;
+    color: #ff883e;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+}
+.nav ul li {
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ff883e;
+    font-weight: bold;
+}
+
+.nav {
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+.hero {
+    display: flex;
+    height: 100vh; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+    background-color: #1a1a3c; /* Adjust background color as needed */
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #1a1a3c; /* Ensure the background matches the overall theme */
+    padding: 20px;
+    color: white;
+    z-index: 1;
+}
+
+.hero-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background: url('path/to/your/overlay-graphic.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.hero-text .content {
+    position: relative;
+    max-width: 500px; /* Adjust as needed */
+    text-align: left;
+}
+
+.hero-text h1 {
+    margin-top: 0;
+    font-size: 2.5rem; /* Adjust as needed */
+}
+
+.hero-text p {
+    font-size: 1.2rem; /* Adjust as needed */
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff883e;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #ff883e;
+}
+
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-content p {
+    margin-bottom: 10px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.about ul li::before {
+    content: '✔️'; /* Change this to any icon you prefer */
+    margin-right: 10px;
+    color: #00bfa5; /* Adjust color as needed */
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff883e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.button:hover {
+    background-color: #ff883e;
+}
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+}
+.why-choose {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #ff883e;
+}
+.why-choose-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.why-choose .feature {
+    width: 150px;
+    text-align: center;
+}
+
+.why-choose .feature img {
+    width: 50px;
+    height: 50px;
+}
+.dental-clinic-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-info, .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .form-section {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;
+}
+.form-section input, .form-section textarea, .form-section button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+  
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#whatsapp-button a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366; /* WhatsApp green color */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#whatsapp-button a:hover {
+    transform: scale(1.1);
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+.social-links a:hover {
+    color: #ff883e;
+    transform: rotate(90deg);
+    box-shadow: 0 0 5px #ff883e, 0 0 10px #ff883e;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+.form-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+.form-section input, .form-section textarea, .form-section button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #ff883e;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.footer div {
+    max-width: 300px;
+}
+.footer a {
+    color: #ff883e;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    header img {
+        max-width: 80px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
